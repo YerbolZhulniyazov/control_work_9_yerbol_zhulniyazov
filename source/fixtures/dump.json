@@ -1,0 +1,406 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Фотография",
+    "content_type": 7,
+    "codename": "add_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Фотография",
+    "content_type": 7,
+    "codename": "change_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Фотография",
+    "content_type": 7,
+    "codename": "delete_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Фотография",
+    "content_type": 7,
+    "codename": "view_image"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$HXz9HDLoxcbHm5TCe4yDA9$oYBdPGRI6bZqk5bb2vo8aXVcOToC/BWF2Yn4NlAbMUU=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "root@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-04-22T08:27:11.708Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$qgF5h4k5wQxTpAIiq90uHN$eaw8Z6JID0uQTRKlYkIOZkkog2cJbWVs3WPh8ZPbG9o=",
+    "last_login": "2023-04-22T11:55:59.300Z",
+    "is_superuser": false,
+    "username": "kairat",
+    "first_name": "Kairat",
+    "last_name": "Smagulov",
+    "email": "kairat@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-22T09:08:38.789Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$YFeRsm3nLmD2kNsLN5nCNN$ZVDWtXobhQYV8yw0kOaXTHdYkfjw9tIgjVQQCxClHNs=",
+    "last_login": "2023-04-22T12:18:03.597Z",
+    "is_superuser": false,
+    "username": "kara",
+    "first_name": "kara",
+    "last_name": "karov",
+    "email": "kara@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-22T12:18:03.252Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "gallery",
+    "model": "image"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8o6cbjwpih0i2dzo7r8u3r31wltv7qac",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hB4pXxcuu8ZyHt8pGogKe3KeHdD0oVuZybzZh6Pvfijp82vkV3ZxC6_jDA8Ux0iPrDeGw-t7ttKfCT8tJ0vLabX7Wz_BgV7GVvQoAIJmkJCaUGgdOCsM0BBWCAgaXJ2SukcNJI2k1Mxg5qdmSlryT5fzFg3Rg:1pqCBn:xyyI_zDrc6ptV1xTfcJFMYI5ZavY-iueqPF0QaE_9JE",
+    "expire_date": "2023-05-06T12:18:03.599Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gh21wh6wwwqo1s9onyvsrae54yx6ad54",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQBe9CHSGwWT4p0_sM1sKug5MIJGNXUe4eIblI2jcz7y1mPPY8H423eSVxFYO4_G4R05NLB_TAcq8y1bJva5RdkSdtcqrEr9vp_h1kbLnXygCB9tZbCM4QLAAJFQEHPS7ajlZZ8sYrFQdkwOQ4QlDRBXbGohGfL78hNyI:1pq9X3:lAAYMKtchYXviBonkxLOwSg93mgIFW03ks_-W5V0huM",
+    "expire_date": "2023-05-06T09:27:49.061Z"
+  }
+},
+{
+  "model": "gallery.image",
+  "pk": 1,
+  "fields": {
+    "image": "juve_e2uWSAH.jpeg",
+    "sign": "Моя страсть",
+    "author": 2,
+    "created_at": "2023-04-22T09:41:45.045Z",
+    "updated_at": "2023-04-22T09:41:45.045Z",
+    "users": [
+      2
+    ]
+  }
+},
+{
+  "model": "gallery.image",
+  "pk": 3,
+  "fields": {
+    "image": "jlo_YibA6PZ.jpeg",
+    "sign": "Супер",
+    "author": 3,
+    "created_at": "2023-04-22T12:30:20.806Z",
+    "updated_at": "2023-04-22T12:30:20.806Z",
+    "users": []
+  }
+}
+]

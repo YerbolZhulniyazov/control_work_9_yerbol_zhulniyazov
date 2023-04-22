@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{%block content%}
+
+<div class="row mx-auto">
+    <div class="col-md-4">
+        <img src="{{image.image.url}}" class="card-img" alt="">
+    </div>
+    <div class="col-md-8">
+        <div class="card-body">
+            <h5 class="card-title">{{image.sign}}</h5>
+            <p>{{image.author}}</p>
+            <p class="card-text"><b>{{image.created_at}}</b></p>
+            {% if image not in request.user.favorites.all %}
+            <a href=" {% url 'fav' image.pk %}" class="to-fav btn btn-secondary btn-sm mt-3" id="{{image.pk}}">Добавить
+                в избранное</a><br>
+            {% else %}
+            <a href="{% url 'fromfav' image.pk %} " class="from-fav btn btn-secondary btn-sm mt-3" id="{{image.pk}}">Удалить
+                из избранного</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    {% for user in users %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Список пользователей у кого она в избранном</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="{% url 'profile' user.pk %}"><p>{{ user.username }}</p></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%endblock%}

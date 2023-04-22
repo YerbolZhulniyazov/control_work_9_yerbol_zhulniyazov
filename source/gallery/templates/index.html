@@ -1,0 +1,96 @@
+{% extends 'base.html'%}
+{% block content %}
+{% if error_text is not None %}
+<h1 style="color: red;">{{ error_text }}</h1>
+{% endif %}
+<div class="row mt-5">
+    {%for image in images%}
+    <div class="col-sm-6">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{{image.image.url}}" class="card-img" style="width:120px;height: 120px;" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Подпись - {{image.sign}}</h5>
+                    <p> Автор - {{image.author}}</p>
+                    <p> Дата создания - {{image.created_at}}</p>
+                    <p>Дата редактирования - {{image.updated_at}}</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <a href="{% url 'image_detail' image.pk %}">Детально</a>
+                            </div>
+                            {% if request.user.is_authenticated%}
+                            {% if request.user == image.author or perms.gallery.change_image%}
+                            <div class="col-sm">
+                                <a href="{% url 'image_update' image.pk %}">Изменить</a>
+                            </div>
+                            {% endif %}
+                            {% if request.user.username == image.author or perms.gallery.delete_image%}
+                            <div class="col-sm">
+                                <form action="{% url 'image_delete' image.pk %}" method="POST">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-secondary btn-sm mr-5">Удалить</button>
+                                </form>
+                            </div>
+                            {% endif %}
+                            {% if image not in request.user.favorites.all %}
+                            <a href=" {% url 'fav' image.pk %}" class="to-fav btn btn-secondary btn-sm mt-3"
+                               id="{{image.pk}}">Добавить в избранное</a><br>
+                            {% else %}
+                            <a href="{% url 'fromfav' image.pk %} " class="from-fav btn btn-secondary btn-sm mt-3"
+                               id="{{image.pk}}">Удалить из избранного</a>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+
+</div>
+
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('.to-fav').on('click', function (e) {
+            e.preventDefault();
+            let pk_image = e.target.id;
+
+            url = `http://127.0.0.1:8000/api/image/${pk_image}`
+
+            fetch(url)
+                .then((response) => {
+
+                    document.getElementById(pk_image).innerText = 'Удалить из избранного'
+                    $(this).removeClass('to-fav').addClass('from-fav');
+                    return response;
+                })
+        });
+
+        $('.from-fav').on('click', function (e) {
+            e.preventDefault();
+            let pk_image = e.target.id;
+            url = `http://127.0.0.1:8000/api/image/${pk_image}`
+
+            fetch(url)
+                .then((response) => {
+
+                    document.getElementById(pk_image).innerText = 'Добавить в избранное'
+                    $(this).removeClass('from-fav').addClass('to-fav')
+
+                    return response;
+                })
+        })
+
+    })
+
+</script>
